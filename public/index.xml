@@ -2,11 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vojta NYC</title>
-    <link>https://example.org/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Vojta NYC</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Feb 2025 19:10:42 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Writing a turn-based strategy game bot in LLMs</title>
+      <link>http://localhost:1313/posts/writing_a_turn_based_game_ai/</link>
+      <pubDate>Sat, 01 Feb 2025 19:10:42 -0500</pubDate>
+      <guid>http://localhost:1313/posts/writing_a_turn_based_game_ai/</guid>
+      <description>&lt;h2 id=&#34;why-am-i-writing-a-bot-for-a-turn-based-game-in-2025&#34;&gt;Why am I writing a bot for a turn-based game in 2025?&lt;/h2&gt;&#xA;&lt;p&gt;We recently developed a turn based strategy &lt;a href=&#34;https://martians-nine.vercel.app&#34;&gt;game&lt;/a&gt; with Michal Srb. The multiplayer is done, but what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.&lt;/p&gt;&#xA;&lt;p&gt;From what I know now, it seems to be the best to:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Implement a basic minimax strategy on a simpler game.&lt;/li&gt;&#xA;&lt;li&gt;Implement interesting heuristics on that simpler game.&lt;/li&gt;&#xA;&lt;li&gt;Use Monte-Carlo tree search on that simpler game.&lt;/li&gt;&#xA;&lt;li&gt;Port one of those strategies to our game.&lt;/li&gt;&#xA;&lt;li&gt;Keep an eye our on the LLMs in the process. I will implement both a strategist that uses LLM queries and use LLMs to help me with the code.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;minimax&#34;&gt;Minimax&lt;/h3&gt;&#xA;&lt;p&gt;The simplest game I could think of is Tic Tac Toe and it&amp;rsquo;s bigger brother called &lt;a href=&#34;https://cs.wikipedia.org/wiki/Pi%C5%A1kvorky&#34;&gt;Piskvorky&lt;/a&gt; (Czech only) or &lt;a href=&#34;https://en.wikipedia.org/wiki/Gomoku&#34;&gt;Gomoku&lt;/a&gt;. A simple warmup is a Tic Tac Toe on 3x3 board.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
