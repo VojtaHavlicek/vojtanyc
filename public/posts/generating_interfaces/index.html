@@ -6,8 +6,7 @@
     
     <title>Skinning a turn-based game with gen AI | Vojta&#39;s Sidequests</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="We are currently developing a turn based strategy game with Michal Srb and here is our prototype graphics:
-
+    <meta name="description" content="We are currently developing a turn based strategy game with Michal Srb.
 Let me explain you the rules first
 Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
 
@@ -44,7 +43,8 @@ The game is a turn-based strategy where two players play against each other. Eac
     <meta property="og:url" content="http://localhost:1313/vojtanyc/posts/generating_interfaces/">
   <meta property="og:site_name" content="Vojta&#39;s Sidequests">
   <meta property="og:title" content="Skinning a turn-based game with gen AI">
-  <meta property="og:description" content="We are currently developing a turn based strategy game with Michal Srb and here is our prototype graphics: Let me explain you the rules first Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
+  <meta property="og:description" content="We are currently developing a turn based strategy game with Michal Srb.
+Let me explain you the rules first Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
 Let me explain you the rules first:
 The game is a turn-based strategy where two players play against each other. Each player tries to connect energy resources (green circles with R) to habitats (circles labeled with P) using pipes (the thick lines).">
   <meta property="og:locale" content="en_us">
@@ -54,15 +54,17 @@ The game is a turn-based strategy where two players play against each other. Eac
     <meta property="article:modified_time" content="2025-02-01T21:03:29-05:00">
 
   <meta itemprop="name" content="Skinning a turn-based game with gen AI">
-  <meta itemprop="description" content="We are currently developing a turn based strategy game with Michal Srb and here is our prototype graphics: Let me explain you the rules first Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
+  <meta itemprop="description" content="We are currently developing a turn based strategy game with Michal Srb.
+Let me explain you the rules first Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
 Let me explain you the rules first:
 The game is a turn-based strategy where two players play against each other. Each player tries to connect energy resources (green circles with R) to habitats (circles labeled with P) using pipes (the thick lines).">
   <meta itemprop="datePublished" content="2025-02-01T21:03:29-05:00">
   <meta itemprop="dateModified" content="2025-02-01T21:03:29-05:00">
-  <meta itemprop="wordCount" content="1238">
+  <meta itemprop="wordCount" content="1257">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Skinning a turn-based game with gen AI">
-  <meta name="twitter:description" content="We are currently developing a turn based strategy game with Michal Srb and here is our prototype graphics: Let me explain you the rules first Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
+  <meta name="twitter:description" content="We are currently developing a turn based strategy game with Michal Srb.
+Let me explain you the rules first Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
 Let me explain you the rules first:
 The game is a turn-based strategy where two players play against each other. Each player tries to connect energy resources (green circles with R) to habitats (circles labeled with P) using pipes (the thick lines).">
 
@@ -116,9 +118,8 @@ The game is a turn-based strategy where two players play against each other. Eac
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>We are currently developing a turn based strategy <a href="https://martians-nine.vercel.app">game</a> with Michal Srb and here is our prototype graphics:
-<img src="images/test.png" alt="My Image" width="600" /></p>
-<h2 id="let-me-explain-you-the-rules-first">Let me explain you the rules first</h2>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>We are currently developing a turn based strategy <a href="https://martians-nine.vercel.app">game</a> with Michal Srb.</p>
+<h3 id="let-me-explain-you-the-rules-first">Let me explain you the rules first</h3>
 <p>Let me explain you the rules first. I fed the following prompt to ChatGPT o1:</p>
 <hr>
 <blockquote>
@@ -226,8 +227,10 @@ The game is a turn-based strategy where two players play against each other. Eac
 </ul>
 <hr></blockquote>
 <p>Feeding rules of the game to ChatGPT o1 came up in a discussion with Tom Krcha and he ran the first couple of experiments with similarly good results.</p>
-<h2 id="many-ways-to-skin-the-game">Many ways to skin the game</h2>
-<p>Now that the model has some rules context about the basic game concepts, let&rsquo;s see how lucky we get with skinning. Here&rsquo;s my first prompt:</p>
+<h3 id="many-ways-to-skin-the-game">Many ways to skin the game</h3>
+<p>Now that the model has some rules context about the basic game concepts, let&rsquo;s see how lucky we get with skinning. This is what the game looks like at the moment:
+<img src="images/test.png" alt="My Image" width="600" /></p>
+<p>Here&rsquo;s my first prompt:</p>
 <blockquote>
 <p><img src="images/cropped_test.png" alt="cropped">
 Great! Here is a snapshot of the current game interface. Could you add textures to it?</p>
@@ -306,6 +309,7 @@ So why not try to generate the whole set of tiles, this time in 128x128?</p>
 <p>Not bad at all after. What about a list of sprites:</p>
 <p><img src="images/spritesheet_habitat.webp" alt="Habitat"></p>
 <p>That&rsquo;s probably it, the middle four look almost immediately useful! Perhaps except for some issues with transparency that I need to take care of. Tom also recommended generative models that use <a href="https://github.com/lllyasviel/ControlNet">controlnet</a>, which I am excited to understand and perhaps blog about later.</p>
+<p>Thanks to Tom Krcha for hints and Michal Srb for the joint work on this!</p>
 <ul class="pa0">
   
 </ul>

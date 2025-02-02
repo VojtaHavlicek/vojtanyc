@@ -4,11 +4,10 @@ draft = false
 title = 'Skinning a turn-based game with gen AI'
 +++
 
-We are currently developing a turn based strategy [game](https://martians-nine.vercel.app) with Michal Srb and here is our prototype graphics: 
-<img src="images/test.png" alt="My Image" width="600" />
+We are currently developing a turn based strategy [game](https://martians-nine.vercel.app) with Michal Srb.
 
 
-## Let me explain you the rules first
+### Let me explain you the rules first
 
 Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
 
@@ -105,8 +104,12 @@ Here's the concise answer. Not bad!
 
 Feeding rules of the game to ChatGPT o1 came up in a discussion with Tom Krcha and he ran the first couple of experiments with similarly good results.
 
-## Many ways to skin the game
-Now that the model has some rules context about the basic game concepts, let's see how lucky we get with skinning. Here's my first prompt: 
+### Many ways to skin the game
+Now that the model has some rules context about the basic game concepts, let's see how lucky we get with skinning. This is what the game looks like at the moment:
+<img src="images/test.png" alt="My Image" width="600" />
+
+
+ Here's my first prompt: 
 
 >![cropped](images/cropped_test.png)
 >Great! Here is a snapshot of the current game interface. Could you add textures to it? 

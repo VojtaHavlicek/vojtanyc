@@ -101,10 +101,8 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>We are currently developing a turn based strategy <a href="https://martians-nine.vercel.app">game</a> with Michal Srb. Here&rsquo;s our prototype graphics:
-<img src="images/test.png" alt="My Image" width="600" /></p>
-<p>This made us come with the idea to skin the game using generative models and use LLMs at all sorts of places.</p>
-<h2 id="let-me-explain-you-the-rules-first">Let me explain you the rules first</h2>
+      <p>We are currently developing a turn based strategy <a href="https://martians-nine.vercel.app">game</a> with Michal Srb.</p>
+<h3 id="let-me-explain-you-the-rules-first">Let me explain you the rules first</h3>
 <p>Let me explain you the rules first. I fed the following prompt to ChatGPT o1:</p>
 <hr>
 <blockquote>
@@ -112,6 +110,35 @@
 <p>The game is a turn-based strategy where two players play against each other. Each player tries to connect energy resources (green circles with R) to habitats (circles labeled with P) using pipes (the thick lines).</p>
     </div>
     <a href="/vojtanyc/posts/generating_interfaces/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/vojtanyc/posts/writing_a_turn_based_game_ai/" class="link black dim">
+        Writing a turn-based strategy game bot in LLMs
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <h2 id="why-am-i-writing-a-bot-for-a-turn-based-game-in-2025">Why am I writing a bot for a turn-based game in 2025?</h2>
+<p>We are currently developing a turn based strategy <a href="https://martians-nine.vercel.app">game</a> with Michal Srb. The multiplayer is done, what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.</p>
+<p>From what I know now, it seems to be the best to:</p>
+<ol>
+<li>Implement a basic minimax strategy on a simpler game.</li>
+<li>Implement interesting heuristics on that simpler game.</li>
+<li>Use Monte-Carlo tree search on that simpler game.</li>
+<li>Port one of those strategies to our game.</li>
+<li>Keep an eye our on the LLMs in the process. I will implement both a strategist that uses LLM queries and use LLMs to help me with the code.</li>
+</ol>
+<h3 id="minimax">Minimax</h3>
+<p>The simplest game I could think of is Tic Tac Toe and it&rsquo;s bigger brother called <a href="https://cs.wikipedia.org/wiki/Pi%C5%A1kvorky">Piskvorky</a> (Czech only) or <a href="https://en.wikipedia.org/wiki/Gomoku">Gomoku</a>. A simple warmup is a Tic Tac Toe on 3x3 board.</p>
+    </div>
+    <a href="/vojtanyc/posts/writing_a_turn_based_game_ai/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
