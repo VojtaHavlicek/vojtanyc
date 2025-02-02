@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://vojtahavlicek.github.io/vojtanyc/posts/</loc>
+    <loc>http://localhost:1313/vojtanyc/posts/</loc>
     <lastmod>2025-02-01T21:03:29-05:00</lastmod>
   </url><url>
-    <loc>https://vojtahavlicek.github.io/vojtanyc/posts/generating_interfaces/</loc>
+    <loc>http://localhost:1313/vojtanyc/posts/generating_interfaces/</loc>
     <lastmod>2025-02-01T21:03:29-05:00</lastmod>
   </url><url>
-    <loc>https://vojtahavlicek.github.io/vojtanyc/</loc>
+    <loc>http://localhost:1313/vojtanyc/</loc>
     <lastmod>2025-02-01T21:03:29-05:00</lastmod>
   </url><url>
-    <loc>https://vojtahavlicek.github.io/vojtanyc/categories/</loc>
+    <loc>http://localhost:1313/vojtanyc/posts/writing_a_turn_based_game_ai/</loc>
+    <lastmod>2025-02-01T19:10:42-05:00</lastmod>
   </url><url>
-    <loc>https://vojtahavlicek.github.io/vojtanyc/tags/</loc>
+    <loc>http://localhost:1313/vojtanyc/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/vojtanyc/tags/</loc>
   </url>
 </urlset>

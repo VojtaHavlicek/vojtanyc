@@ -1,14 +1,13 @@
 +++
 date = '2025-02-01T21:03:29-05:00'
 draft = false
-title = 'Skinning a turn-based strategy game'
+title = 'Skinning a turn-based game with gen AI'
 +++
 
-## Skinning a Turn-based strategy game with LLM
-We are currently developing a turn based strategy [game](https://martians-nine.vercel.app) with Michal Srb. Currently, our prototype graphics looks like this: 
-![Image Description](/images/test.png)
+We are currently developing a turn based strategy [game](https://martians-nine.vercel.app) with Michal Srb. Here's our prototype graphics: 
+![Image Description](images/test.png)
 
-Since the foundational models do incredibly well in all sorts of domains, why not try to skin this using ChatGPT? 
+This made us come with the idea to skin the game using generative models and use LLMs at all sorts of places. 
 
 ## Let me explain you the rules first
 
@@ -108,11 +107,9 @@ Here's the concise answer. Not bad!
 Feeding rules of the game to ChatGPT o1 came up in a discussion with Tom Krcha and he ran the first couple of experiments with similarly good results.
 
 ## Many ways to skin the game
-`Constraints? What constraints - Tom Krcha`
-
 Now that the model has some rules context about the basic game concepts, let's see how lucky we get with skinning. Here's my first prompt: 
 
->![cropped](/images/cropped_test.png)
+>![cropped](images/cropped_test.png)
 >Great! Here is a snapshot of the current game interface. Could you add textures to it? 
 >
 >I would like the environment to look like a deserted planet, perhaps mars in the distant future, inhabited by the first few humans. 
@@ -128,8 +125,7 @@ k4VQp5nBCXFreIHIgIQ/v8i0NPeKugANrfSgD2FlF/89NVEWIsYPefrEybtS9gND3/Q8V
 0ItyhtZFebcR3DP5Bw09XScW5BZaZwAAAABJRU5ErkJggg==
 ```
 
-### Ground tiles
-Unfortunately, this does not seem to be valid (if you somehow manage to decode this, let me know). I tried for some time, but ultimately failed. Also, what a way to potentially get some malware into your laptop! On the next attempt, ChatGPT got frustrated and it spit out a Python script to generate a texture! 
+What a marvelous idea. Unfortunately, this does not seem to be valid (if you somehow manage to decode this, let me know). I tried for some time, but ultimately failed. Also, what a way to potentially get some malware into your laptop! On the next attempt, ChatGPT got frustrated and it spit out a Python script to generate a texture! 
 
 ```
 import base64
@@ -179,45 +175,39 @@ if __name__ == "__main__":
     print("data:image/png;base64," + mars_base64)
 ```
 
-Here's the masterpiece: ![Generated image](/images/masterpiece.png)
+Here's the masterpiece: ![Generated image](images/masterpiece.png)
 So why not try to generate the whole set of tiles, this time in 128x128? 
 
 This was the answer: 
 
-![Tileset](/images/mars_tile_0.png),![Tileset](/images/mars_tile_1.png)
+![Tileset](images/mars_tile_0.png),![Tileset](images/mars_tile_1.png)
 
 Kind of boring. Can you add some debris, rocks and craters to add variety? This gave me the following image generator: 
 
-![Tileset](/images/mars_tiles_craters/mars_tile_0.png),![Tileset](/images/mars_tiles_craters/mars_tile_1.png), ![Tileset](/images/mars_tiles_craters/mars_tile_2.png), ![Tileset](/images/mars_tiles_craters/mars_tile_3.png)
+![Tileset](images/mars_tiles_craters/mars_tile_0.png),![Tileset](images/mars_tiles_craters/mars_tile_1.png), ![Tileset](images/mars_tiles_craters/mars_tile_2.png), ![Tileset](images/mars_tiles_craters/mars_tile_3.png)
 
 Not entirely useful, but there seems to be some potential. So let's force it to use Perlin noise? 
 
-![Tileset](/images/mars_tiles_perlin/mars_perlin_0.png),![Tileset](/images/mars_tiles_perlin/mars_perlin_1.png), ![Tileset](/images/mars_tiles_perlin/mars_perlin_2.png), ![Tileset](/images/mars_tiles_perlin/mars_perlin_3.png)
+![Tileset](images/mars_tiles_perlin/mars_perlin_0.png),![Tileset](images/mars_tiles_perlin/mars_perlin_1.png), ![Tileset](images/mars_tiles_perlin/mars_perlin_2.png), ![Tileset](images/mars_tiles_perlin/mars_perlin_3.png)
 
 Add "shader" behavior, so that the splats blend in better with the background? That did not work well at all: 
 
-![Tileset](/images/mars_tiles_blurred/mars_blurred_0.png),![Tileset](/images/mars_tiles_blurred/mars_blurred_1.png), ![Tileset](/images/mars_tiles_blurred/mars_blurred_2.png), ![Tileset](/images/mars_tiles_blurred/mars_blurred_3.png)
+![Tileset](images/mars_tiles_blurred/mars_blurred_0.png),![Tileset](images/mars_tiles_blurred/mars_blurred_1.png)
 
-oh well... 
+Oh well. I almost gave up at this point, until Tom sent me this: 
+![Tom](images/tom_colony/a1.png)
 
-### Pipes
-The first results look like this: 
-
-![Tileset](/images/pipe_textures_perfect_arcs/pipe_corner_EN.png), ![Tileset](/images/pipe_textures_perfect_arcs/pipe_corner_ES.png), ![Tileset](/images/pipe_textures_perfect_arcs/pipe_horizontal.png)
-
-
-At this point, things fellt like a huge letdown, until I got this message from Tom: 
-![Preview](/images/tom_colony/a1.png)
+So there is some way clearly! 
 
 ## Round 2
-After all that we've been through, let me just ask... 
+After all that we've been through, now that the model has a lot of   context it needs, let me just ask... 
 > Can you generate an image asset for the habitat? 
 
-![Habitat](/images/Habitat.webp)
+![Habitat](images/Habitat.webp)
 
-Not bad at all after all that pain. What about a list of sprites: 
+Not bad at all after. What about a list of sprites: 
 
-![Habitat](/images/spritesheet_habitat.webp)
+![Habitat](images/spritesheet_habitat.webp)
 
-That's it, the middle four look almost immediately useful! It's getting really late though. I will carry on with this later.
+That's probably it, the middle four look almost immediately useful! Perhaps except for some issues with transparency that I need to take care of. Tom also recommended generative models that use [controlnet](https://github.com/lllyasviel/ControlNet), which I am excited to understand and blog about later.
 
