@@ -59,7 +59,7 @@ The game is a turn-based strategy where two players play against each other. Eac
 Each habitat has a certain population (the number that appears after P). The goal of the game is to get a total population of 30 before your oponent and not run out of energy.">
   <meta itemprop="datePublished" content="2025-01-01T21:03:29-05:00">
   <meta itemprop="dateModified" content="2025-01-01T21:03:29-05:00">
-  <meta itemprop="wordCount" content="1250">
+  <meta itemprop="wordCount" content="1211">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Skinning a turn-based game with gen AI">
   <meta name="twitter:description" content="We are currently developing a turn based strategy game with Michal Srb. Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
@@ -224,13 +224,12 @@ Each habitat has a certain population (the number that appears after P). The goa
 </ul>
 <hr></blockquote>
 <p>Feeding rules of the game to ChatGPT o1 came up in a discussion with Tom Krcha and he ran the first couple of experiments with similarly good results.</p>
-<h3 id="many-ways-to-skin-the-game">Many ways to skin the game</h3>
 <p>Now that the model has some rules context about the basic game concepts, let&rsquo;s see how lucky we get with skinning. This is what the game looks like at the moment:
-<img src="images/test.png" alt="My Image" width="600" /></p>
+<img src="images/test.png" alt="game interface" width="600" /></p>
 <p>Here&rsquo;s my first prompt:</p>
 <blockquote>
-<p><img src="images/cropped_test.png" alt="cropped">
-Great! Here is a snapshot of the current game interface. Could you add textures to it?</p>
+<img src="images/cropped_test.png" alt="game interface" width="600" />
+Great! Here is a snapshot of the current game interface. Could you add textures to it? 
 <p>I would like the environment to look like a deserted planet, perhaps Mars in the distant future, inhabited by the first few humans.</p></blockquote>
 <p>ChatGPT gave me a guideline on how to design the tileset, but did not give me any graphics first. It then helped me to generate a project structure to display the tiles correctly. But then came a shocker, it output a PNG in Base64 encoding as a desert tile!</p>
 <pre tabindex="0"><code>data:image/png;base64,
@@ -239,7 +238,8 @@ iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAABJUlEQVR4nO3WAQEDURDE0dE
 fAWNcxRFC/DBF+DEUBZHBGCmlsUP9Nj1+Db8uO9kjnlwjaN71KITphkD1PTV5M0bSdQvNt
 k4VQp5nBCXFreIHIgIQ/v8i0NPeKugANrfSgD2FlF/89NVEWIsYPefrEybtS9gND3/Q8V
 0ItyhtZFebcR3DP5Bw09XScW5BZaZwAAAABJRU5ErkJggg==
-</code></pre><p>What a marvelous idea. Unfortunately, this does not seem to be valid (if you somehow manage to decode this, let me know). I tried for some time, but ultimately failed. Also, what a way to potentially get some malware into your laptop! On the next attempt, ChatGPT got frustrated and it spit out a Python script to generate a texture.</p>
+</code></pre><p>Good idea, but unfortunately, this does not seem to be a valid Base64 encoded png (try it and tell me if you decode). Also, what a way to potentially get some malware into your laptop!</p>
+<p>On the next attempt, ChatGPT generated a Python script to generate a texture.</p>
 <pre tabindex="0"><code>import base64
 import io
 from PIL import Image
@@ -297,16 +297,14 @@ So why not try to generate the whole set of tiles, this time in 128x128?</p>
 <p><img src="images/mars_tiles_blurred/mars_blurred_0.png" alt="Tileset">,<img src="images/mars_tiles_blurred/mars_blurred_1.png" alt="Tileset"></p>
 <p>Oh well. I almost gave up at this point, until Tom sent me this:
 <img src="images/tom_colony/a1.png" alt="Tom"></p>
-<p>So there is some way clearly!</p>
 <h2 id="round-2">Round 2</h2>
 <p>After all that we&rsquo;ve been through, now that the model has a lot of   context it needs, let me just ask&hellip;</p>
 <blockquote>
 <p>Can you generate an image asset for the habitat?</p></blockquote>
-<p><img src="images/Habitat.webp" alt="Habitat"></p>
+<img src="images/Habitat.webp" alt="habitat" width="600" />
 <p>Not bad at all after. What about a list of sprites:</p>
-<p><img src="images/spritesheet_habitat.webp" alt="Habitat"></p>
+<img src="images/spritesheet_habitat.webp" alt="habitat" width="600" />
 <p>That&rsquo;s probably it, the middle four look almost immediately useful! Perhaps except for some issues with transparency that I need to take care of. Tom also recommended generative models that use <a href="https://github.com/lllyasviel/ControlNet">controlnet</a>, which I am excited to understand and perhaps blog about later.</p>
-<p>Thanks to Tom Krcha for hints and Michal Srb for the joint work on this!</p>
 <ul class="pa0">
   
 </ul>

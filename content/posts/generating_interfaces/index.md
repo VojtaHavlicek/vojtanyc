@@ -99,14 +99,14 @@ Here's the concise answer. Not bad!
 
 Feeding rules of the game to ChatGPT o1 came up in a discussion with Tom Krcha and he ran the first couple of experiments with similarly good results.
 
-### Many ways to skin the game
+
 Now that the model has some rules context about the basic game concepts, let's see how lucky we get with skinning. This is what the game looks like at the moment:
-<img src="images/test.png" alt="My Image" width="600" />
+<img src="images/test.png" alt="game interface" width="600" />
 
 
  Here's my first prompt: 
 
->![cropped](images/cropped_test.png)
+><img src="images/cropped_test.png" alt="game interface" width="600" />
 >Great! Here is a snapshot of the current game interface. Could you add textures to it? 
 >
 >I would like the environment to look like a deserted planet, perhaps Mars in the distant future, inhabited by the first few humans. 
@@ -122,7 +122,9 @@ k4VQp5nBCXFreIHIgIQ/v8i0NPeKugANrfSgD2FlF/89NVEWIsYPefrEybtS9gND3/Q8V
 0ItyhtZFebcR3DP5Bw09XScW5BZaZwAAAABJRU5ErkJggg==
 ```
 
-What a marvelous idea. Unfortunately, this does not seem to be valid (if you somehow manage to decode this, let me know). I tried for some time, but ultimately failed. Also, what a way to potentially get some malware into your laptop! On the next attempt, ChatGPT got frustrated and it spit out a Python script to generate a texture.
+Good idea, but unfortunately, this does not seem to be a valid Base64 encoded png (try it and tell me if you decode). Also, what a way to potentially get some malware into your laptop! 
+
+On the next attempt, ChatGPT generated a Python script to generate a texture.
 
 ```
 import base64
@@ -194,19 +196,17 @@ Add "shader" behavior, so that the splats blend in better with the background? T
 Oh well. I almost gave up at this point, until Tom sent me this: 
 ![Tom](images/tom_colony/a1.png)
 
-So there is some way clearly! 
 
 ## Round 2
 After all that we've been through, now that the model has a lot of   context it needs, let me just ask... 
 > Can you generate an image asset for the habitat? 
 
-![Habitat](images/Habitat.webp)
+<img src="images/Habitat.webp" alt="habitat" width="600" />
 
 Not bad at all after. What about a list of sprites: 
 
-![Habitat](images/spritesheet_habitat.webp)
+<img src="images/spritesheet_habitat.webp" alt="habitat" width="600" />
 
 That's probably it, the middle four look almost immediately useful! Perhaps except for some issues with transparency that I need to take care of. Tom also recommended generative models that use [controlnet](https://github.com/lllyasviel/ControlNet), which I am excited to understand and perhaps blog about later.
 
-Thanks to Tom Krcha for hints and Michal Srb for the joint work on this!
 

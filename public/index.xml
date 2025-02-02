@@ -6,8 +6,15 @@
     <description>Recent content on Vojta&#39;s Sidequests</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2025 21:03:29 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2025 19:10:42 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/vojtanyc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Writing a turn-based strategy game bot</title>
+      <link>http://localhost:1313/vojtanyc/posts/writing-a-turn-based-game-ai/</link>
+      <pubDate>Sat, 01 Feb 2025 19:10:42 -0500</pubDate>
+      <guid>http://localhost:1313/vojtanyc/posts/writing-a-turn-based-game-ai/</guid>
+      <description>&lt;p&gt;Why am I writing a bot for a turn-based game in 2025?&#xA;We are currently developing a turn based strategy &lt;a href=&#34;https://martians-nine.vercel.app&#34;&gt;game&lt;/a&gt; with Michal Srb. The multiplayer is done, what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.&lt;/p&gt;&#xA;&lt;p&gt;From what I know now, it seems to be the best to:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Implement a basic minimax strategy on a simpler game.&lt;/li&gt;&#xA;&lt;li&gt;Implement interesting heuristics on that simpler game.&lt;/li&gt;&#xA;&lt;li&gt;Use Monte-Carlo tree search on that simpler game.&lt;/li&gt;&#xA;&lt;li&gt;Port one of those strategies to our game.&lt;/li&gt;&#xA;&lt;li&gt;Keep an eye our on the LLMs in the process. I will implement both a strategist that uses LLM queries and use LLMs to help me with the code.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;minimax&#34;&gt;Minimax&lt;/h3&gt;&#xA;&lt;p&gt;The simplest game I could think of is Tic Tac Toe and it&amp;rsquo;s bigger brother called &lt;a href=&#34;https://cs.wikipedia.org/wiki/Pi%C5%A1kvorky&#34;&gt;Piskvorky&lt;/a&gt; (Czech only) or &lt;a href=&#34;https://en.wikipedia.org/wiki/Gomoku&#34;&gt;Gomoku&lt;/a&gt;. A simple warmup is a Tic Tac Toe on 3x3 board.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Skinning a turn-based game with gen AI</title>
       <link>http://localhost:1313/vojtanyc/posts/generating_interfaces/</link>
