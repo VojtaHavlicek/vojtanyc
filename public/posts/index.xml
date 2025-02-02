@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Vojta NYC</title>
-    <link>https://vojtahavlicek.github.io/posts/</link>
+    <link>https://vojtahavlicek.github.io/vojtanyc/posts/</link>
     <description>Recent content in Posts on Vojta NYC</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 01 Feb 2025 21:03:29 -0500</lastBuildDate>
-    <atom:link href="https://vojtahavlicek.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://vojtahavlicek.github.io/vojtanyc/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Skinning a turn-based strategy game</title>
-      <link>https://vojtahavlicek.github.io/posts/generating_interfaces/</link>
+      <link>https://vojtahavlicek.github.io/vojtanyc/posts/generating_interfaces/</link>
       <pubDate>Sat, 01 Feb 2025 21:03:29 -0500</pubDate>
-      <guid>https://vojtahavlicek.github.io/posts/generating_interfaces/</guid>
-      <description>&lt;h2 id=&#34;skinning-a-turn-based-strategy-game-with-llm&#34;&gt;Skinning a Turn-based strategy game with LLM&lt;/h2&gt;&#xA;&lt;p&gt;We are currently developing a turn based strategy &lt;a href=&#34;https://martians-nine.vercel.app&#34;&gt;game&lt;/a&gt; with Michal Srb. Currently, our prototype graphics looks like this:&#xA;&lt;img src=&#34;https://vojtahavlicek.github.io/images/test.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Since the foundational models do incredibly well in all sorts of domains, why not try to skin this using ChatGPT?&lt;/p&gt;&#xA;&lt;h2 id=&#34;let-me-explain-you-the-rules-first&#34;&gt;Let me explain you the rules first&lt;/h2&gt;&#xA;&lt;p&gt;Let me explain you the rules first. I fed the following prompt to ChatGPT o1:&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Let me explain you the rules first:&lt;/p&gt;</description>
+      <guid>https://vojtahavlicek.github.io/vojtanyc/posts/generating_interfaces/</guid>
+      <description>&lt;h2 id=&#34;skinning-a-turn-based-strategy-game-with-llm&#34;&gt;Skinning a Turn-based strategy game with LLM&lt;/h2&gt;&#xA;&lt;p&gt;We are currently developing a turn based strategy &lt;a href=&#34;https://martians-nine.vercel.app&#34;&gt;game&lt;/a&gt; with Michal Srb. Currently, our prototype graphics looks like this:&#xA;&lt;img src=&#34;https://vojtahavlicek.github.io/vojtanyc/images/test.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Since the foundational models do incredibly well in all sorts of domains, why not try to skin this using ChatGPT?&lt;/p&gt;&#xA;&lt;h2 id=&#34;let-me-explain-you-the-rules-first&#34;&gt;Let me explain you the rules first&lt;/h2&gt;&#xA;&lt;p&gt;Let me explain you the rules first. I fed the following prompt to ChatGPT o1:&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Let me explain you the rules first:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
