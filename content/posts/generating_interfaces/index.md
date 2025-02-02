@@ -4,10 +4,9 @@ draft = false
 title = 'Skinning a turn-based game with gen AI'
 +++
 
-We are currently developing a turn based strategy [game](https://martians-nine.vercel.app) with Michal Srb. Here's our prototype graphics: 
-![Image Description](images/test.png)
+We are currently developing a turn based strategy [game](https://martians-nine.vercel.app) with Michal Srb and here is our prototype graphics: 
+<img src="images/test.png" alt="My Image" width="600" />
 
-This made us come with the idea to skin the game using generative models and use LLMs at all sorts of places. 
 
 ## Let me explain you the rules first
 
@@ -112,7 +111,7 @@ Now that the model has some rules context about the basic game concepts, let's s
 >![cropped](images/cropped_test.png)
 >Great! Here is a snapshot of the current game interface. Could you add textures to it? 
 >
->I would like the environment to look like a deserted planet, perhaps mars in the distant future, inhabited by the first few humans. 
+>I would like the environment to look like a deserted planet, perhaps Mars in the distant future, inhabited by the first few humans. 
 
 ChatGPT gave me a guideline on how to design the tileset, but did not give me any graphics first. It then helped me to generate a project structure to display the tiles correctly. But then came a shocker, it output a PNG in Base64 encoding as a desert tile!
 
@@ -125,7 +124,7 @@ k4VQp5nBCXFreIHIgIQ/v8i0NPeKugANrfSgD2FlF/89NVEWIsYPefrEybtS9gND3/Q8V
 0ItyhtZFebcR3DP5Bw09XScW5BZaZwAAAABJRU5ErkJggg==
 ```
 
-What a marvelous idea. Unfortunately, this does not seem to be valid (if you somehow manage to decode this, let me know). I tried for some time, but ultimately failed. Also, what a way to potentially get some malware into your laptop! On the next attempt, ChatGPT got frustrated and it spit out a Python script to generate a texture! 
+What a marvelous idea. Unfortunately, this does not seem to be valid (if you somehow manage to decode this, let me know). I tried for some time, but ultimately failed. Also, what a way to potentially get some malware into your laptop! On the next attempt, ChatGPT got frustrated and it spit out a Python script to generate a texture.
 
 ```
 import base64
@@ -209,5 +208,7 @@ Not bad at all after. What about a list of sprites:
 
 ![Habitat](images/spritesheet_habitat.webp)
 
-That's probably it, the middle four look almost immediately useful! Perhaps except for some issues with transparency that I need to take care of. Tom also recommended generative models that use [controlnet](https://github.com/lllyasviel/ControlNet), which I am excited to understand and blog about later.
+That's probably it, the middle four look almost immediately useful! Perhaps except for some issues with transparency that I need to take care of. Tom also recommended generative models that use [controlnet](https://github.com/lllyasviel/ControlNet), which I am excited to understand and perhaps blog about later.
+
+Thanks to Tom Krcha for hints and Michal Srb for the joint work on this!
 
