@@ -6,21 +6,14 @@
     <description>Recent content on Vojta&#39;s Sidequests</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2025 21:03:29 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2025 21:03:29 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/vojtanyc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Skinning a turn-based game with gen AI</title>
       <link>http://localhost:1313/vojtanyc/posts/generating_interfaces/</link>
-      <pubDate>Sat, 01 Feb 2025 21:03:29 -0500</pubDate>
+      <pubDate>Wed, 01 Jan 2025 21:03:29 -0500</pubDate>
       <guid>http://localhost:1313/vojtanyc/posts/generating_interfaces/</guid>
-      <description>&lt;p&gt;We are currently developing a turn based strategy &lt;a href=&#34;https://martians-nine.vercel.app&#34;&gt;game&lt;/a&gt; with Michal Srb.&lt;/p&gt;&#xA;&lt;h3 id=&#34;let-me-explain-you-the-rules-first&#34;&gt;Let me explain you the rules first&lt;/h3&gt;&#xA;&lt;p&gt;Let me explain you the rules first. I fed the following prompt to ChatGPT o1:&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Let me explain you the rules first:&lt;/p&gt;&#xA;&lt;p&gt;The game is a turn-based strategy where two players play against each other. Each player tries to connect energy resources (green circles with R) to habitats (circles labeled with P) using pipes (the thick lines).&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Writing a turn-based strategy game bot in LLMs</title>
-      <link>http://localhost:1313/vojtanyc/posts/writing_a_turn_based_game_ai/</link>
-      <pubDate>Sat, 01 Feb 2025 19:10:42 -0500</pubDate>
-      <guid>http://localhost:1313/vojtanyc/posts/writing_a_turn_based_game_ai/</guid>
-      <description>&lt;h2 id=&#34;why-am-i-writing-a-bot-for-a-turn-based-game-in-2025&#34;&gt;Why am I writing a bot for a turn-based game in 2025?&lt;/h2&gt;&#xA;&lt;p&gt;We are currently developing a turn based strategy &lt;a href=&#34;https://martians-nine.vercel.app&#34;&gt;game&lt;/a&gt; with Michal Srb. The multiplayer is done, what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.&lt;/p&gt;&#xA;&lt;p&gt;From what I know now, it seems to be the best to:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Implement a basic minimax strategy on a simpler game.&lt;/li&gt;&#xA;&lt;li&gt;Implement interesting heuristics on that simpler game.&lt;/li&gt;&#xA;&lt;li&gt;Use Monte-Carlo tree search on that simpler game.&lt;/li&gt;&#xA;&lt;li&gt;Port one of those strategies to our game.&lt;/li&gt;&#xA;&lt;li&gt;Keep an eye our on the LLMs in the process. I will implement both a strategist that uses LLM queries and use LLMs to help me with the code.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;minimax&#34;&gt;Minimax&lt;/h3&gt;&#xA;&lt;p&gt;The simplest game I could think of is Tic Tac Toe and it&amp;rsquo;s bigger brother called &lt;a href=&#34;https://cs.wikipedia.org/wiki/Pi%C5%A1kvorky&#34;&gt;Piskvorky&lt;/a&gt; (Czech only) or &lt;a href=&#34;https://en.wikipedia.org/wiki/Gomoku&#34;&gt;Gomoku&lt;/a&gt;. A simple warmup is a Tic Tac Toe on 3x3 board.&lt;/p&gt;</description>
+      <description>&lt;p&gt;We are currently developing a turn based strategy &lt;a href=&#34;https://martians-nine.vercel.app&#34;&gt;game&lt;/a&gt; with Michal Srb. Let me explain you the rules first. I fed the following prompt to ChatGPT o1:&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Let me explain you the rules first:&lt;/p&gt;&#xA;&lt;p&gt;The game is a turn-based strategy where two players play against each other. Each player tries to connect energy resources (green circles with R) to habitats (circles labeled with P) using pipes (the thick lines).&lt;/p&gt;&#xA;&lt;p&gt;Each habitat has a certain population (the number that appears after P). The goal of the game is to get a total population of 30 before your oponent and not run out of energy.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

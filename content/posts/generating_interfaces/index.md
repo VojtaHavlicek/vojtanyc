@@ -1,15 +1,10 @@
 +++
-date = '2025-02-01T21:03:29-05:00'
+date = '2025-01-01T21:03:29-05:00'
 draft = false
 title = 'Skinning a turn-based game with gen AI'
 +++
 
-We are currently developing a turn based strategy [game](https://martians-nine.vercel.app) with Michal Srb.
-
-
-### Let me explain you the rules first
-
-Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
+We are currently developing a turn based strategy [game](https://martians-nine.vercel.app) with Michal Srb. Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
 
 ---
 >Let me explain you the rules first:
