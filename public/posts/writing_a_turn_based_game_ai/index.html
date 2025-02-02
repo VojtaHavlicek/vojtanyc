@@ -7,7 +7,7 @@
     <title>Writing a turn-based strategy game bot in LLMs | Vojta NYC</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Why am I writing a bot for a turn-based game in 2025?
-We recently developed a turn based strategy game with Michal Srb. The multiplayer is done, but what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.
+We are currently developing a turn based strategy game with Michal Srb. The multiplayer is done, what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.
 From what I know now, it seems to be the best to:
 
 Implement a basic minimax strategy on a simpler game.
@@ -48,7 +48,7 @@ The simplest game I could think of is Tic Tac Toe and it&rsquo;s bigger brother 
     <meta property="og:url" content="http://localhost:1313/posts/writing_a_turn_based_game_ai/">
   <meta property="og:site_name" content="Vojta NYC">
   <meta property="og:title" content="Writing a turn-based strategy game bot in LLMs">
-  <meta property="og:description" content="Why am I writing a bot for a turn-based game in 2025? We recently developed a turn based strategy game with Michal Srb. The multiplayer is done, but what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.
+  <meta property="og:description" content="Why am I writing a bot for a turn-based game in 2025? We are currently developing a turn based strategy game with Michal Srb. The multiplayer is done, what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.
 From what I know now, it seems to be the best to:
 Implement a basic minimax strategy on a simpler game. Implement interesting heuristics on that simpler game. Use Monte-Carlo tree search on that simpler game. Port one of those strategies to our game. Keep an eye our on the LLMs in the process. I will implement both a strategist that uses LLM queries and use LLMs to help me with the code. Minimax The simplest game I could think of is Tic Tac Toe and it’s bigger brother called Piskvorky (Czech only) or Gomoku. A simple warmup is a Tic Tac Toe on 3x3 board.">
   <meta property="og:locale" content="en_us">
@@ -58,7 +58,7 @@ Implement a basic minimax strategy on a simpler game. Implement interesting heur
     <meta property="article:modified_time" content="2025-02-01T19:10:42-05:00">
 
   <meta itemprop="name" content="Writing a turn-based strategy game bot in LLMs">
-  <meta itemprop="description" content="Why am I writing a bot for a turn-based game in 2025? We recently developed a turn based strategy game with Michal Srb. The multiplayer is done, but what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.
+  <meta itemprop="description" content="Why am I writing a bot for a turn-based game in 2025? We are currently developing a turn based strategy game with Michal Srb. The multiplayer is done, what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.
 From what I know now, it seems to be the best to:
 Implement a basic minimax strategy on a simpler game. Implement interesting heuristics on that simpler game. Use Monte-Carlo tree search on that simpler game. Port one of those strategies to our game. Keep an eye our on the LLMs in the process. I will implement both a strategist that uses LLM queries and use LLMs to help me with the code. Minimax The simplest game I could think of is Tic Tac Toe and it’s bigger brother called Piskvorky (Czech only) or Gomoku. A simple warmup is a Tic Tac Toe on 3x3 board.">
   <meta itemprop="datePublished" content="2025-02-01T19:10:42-05:00">
@@ -66,7 +66,7 @@ Implement a basic minimax strategy on a simpler game. Implement interesting heur
   <meta itemprop="wordCount" content="153">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Writing a turn-based strategy game bot in LLMs">
-  <meta name="twitter:description" content="Why am I writing a bot for a turn-based game in 2025? We recently developed a turn based strategy game with Michal Srb. The multiplayer is done, but what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.
+  <meta name="twitter:description" content="Why am I writing a bot for a turn-based game in 2025? We are currently developing a turn based strategy game with Michal Srb. The multiplayer is done, what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.
 From what I know now, it seems to be the best to:
 Implement a basic minimax strategy on a simpler game. Implement interesting heuristics on that simpler game. Use Monte-Carlo tree search on that simpler game. Port one of those strategies to our game. Keep an eye our on the LLMs in the process. I will implement both a strategist that uses LLM queries and use LLMs to help me with the code. Minimax The simplest game I could think of is Tic Tac Toe and it’s bigger brother called Piskvorky (Czech only) or Gomoku. A simple warmup is a Tic Tac Toe on 3x3 board.">
 
@@ -121,7 +121,7 @@ Implement a basic minimax strategy on a simpler game. Implement interesting heur
       
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="why-am-i-writing-a-bot-for-a-turn-based-game-in-2025">Why am I writing a bot for a turn-based game in 2025?</h2>
-<p>We recently developed a turn based strategy <a href="https://martians-nine.vercel.app">game</a> with Michal Srb. The multiplayer is done, but what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.</p>
+<p>We are currently developing a turn based strategy <a href="https://martians-nine.vercel.app">game</a> with Michal Srb. The multiplayer is done, what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent.</p>
 <p>From what I know now, it seems to be the best to:</p>
 <ol>
 <li>Implement a basic minimax strategy on a simpler game.</li>

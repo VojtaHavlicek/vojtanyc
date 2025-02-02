@@ -1,2 +1,0 @@
-# vojtanyc
-Blog

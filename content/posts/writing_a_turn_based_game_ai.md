@@ -1,11 +1,11 @@
 +++
 date = '2025-02-01T19:10:42-05:00'
-draft = false
+draft = true
 title = 'Writing a turn-based strategy game bot in LLMs'
 +++
 
 ## Why am I writing a bot for a turn-based game in 2025? 
-We recently developed a turn based strategy [game](https://martians-nine.vercel.app) with Michal Srb. The multiplayer is done, but what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent. 
+We are currently developing a turn based strategy [game](https://martians-nine.vercel.app) with Michal Srb. The multiplayer is done, what remains is the AI. This series of blogposts will follow my journey towards implementing a (hopefully) decent oponnent. 
 
 From what I know now, it seems to be the best to:
 1) Implement a basic minimax strategy on a simpler game.
