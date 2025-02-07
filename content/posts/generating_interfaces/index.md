@@ -1,7 +1,7 @@
 +++
 date = '2025-01-01T21:03:29-05:00'
 draft = false
-title = 'Skinning a turn-based game with gen AI'
+title = 'Generating Graphics for a Turn-Based Game'
 +++
 
 We are currently developing a turn based strategy [game](https://martians-nine.vercel.app) with Michal Srb. Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
@@ -201,12 +201,12 @@ Oh well. I almost gave up at this point, until Tom sent me this:
 After all that we've been through, now that the model has a lot of   context it needs, let me just ask... 
 > Can you generate an image asset for the habitat? 
 
-<img src="images/Habitat.webp" alt="habitat" width="600" />
+<img src="images/Habitat.webp" alt="habitat" width="200" />
 
 Not bad at all after. What about a list of sprites: 
 
 <img src="images/spritesheet_habitat.webp" alt="habitat" width="600" />
 
-That's probably it, the middle four look almost immediately useful! Perhaps except for some issues with transparency that I need to take care of. Tom also recommended generative models that use [controlnet](https://github.com/lllyasviel/ControlNet), which I am excited to understand and perhaps blog about later.
+That's probably it, the middle four look almost immediately useful! Perhaps except for some issues with transparency that I need to take care of. Tom also recommended generative models that use [Controlnet](https://github.com/lllyasviel/ControlNet), which I am excited to understand and perhaps blog about later.
 
 
