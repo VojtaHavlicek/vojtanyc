@@ -4,7 +4,7 @@ draft = false
 title = 'Generating Graphics for a Turn-Based Game'
 +++
 
-We are currently developing a turn based strategy [game](https://martians-nine.vercel.app) with Michal Srb. Let me explain you the rules first. I fed the following prompt to ChatGPT o1:
+We are currently developing a turn-based strategy [game](https://martians-nine.vercel.app) we tentativelly call Mars Colony with a friend. Here are the rules:
 
 ---
 >Let me explain you the rules first:

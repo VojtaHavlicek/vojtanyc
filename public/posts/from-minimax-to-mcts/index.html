@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/vojtanyc/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=vojtanyc/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>From Minimax to Monte Carlo Tree Search: Smarter AI for Mars Colony | Sidequests</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Documenting my journey from handcrafted heuristics to Monte Carlo Tree Search with learned evaluation">
+    <meta name="generator" content="Hugo 0.143.0">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/vojtanyc/ananke/css/main.min.css" >
+
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/vojtanyc/posts/from-minimax-to-mcts/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/vojtanyc/posts/from-minimax-to-mcts/">
+  <meta property="og:site_name" content="Sidequests">
+  <meta property="og:title" content="From Minimax to Monte Carlo Tree Search: Smarter AI for Mars Colony">
+  <meta property="og:description" content="Documenting my journey from handcrafted heuristics to Monte Carlo Tree Search with learned evaluation">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-26T00:00:00+00:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Game Development">
+    <meta property="article:tag" content="Reinforcement Learning">
+    <meta property="article:tag" content="MCTS">
+    <meta property="article:tag" content="Minimax">
+    <meta property="article:tag" content="Typescript">
+
+  <meta itemprop="name" content="From Minimax to Monte Carlo Tree Search: Smarter AI for Mars Colony">
+  <meta itemprop="description" content="Documenting my journey from handcrafted heuristics to Monte Carlo Tree Search with learned evaluation">
+  <meta itemprop="datePublished" content="2025-03-26T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-03-26T00:00:00+00:00">
+  <meta itemprop="wordCount" content="573">
+  <meta itemprop="keywords" content="AI,Game Development,Reinforcement Learning,MCTS,Minimax,Typescript">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="From Minimax to Monte Carlo Tree Search: Smarter AI for Mars Colony">
+  <meta name="twitter:description" content="Documenting my journey from handcrafted heuristics to Monte Carlo Tree Search with learned evaluation">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/vojtanyc/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Sidequests
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">From Minimax to Monte Carlo Tree Search: Smarter AI for Mars Colony</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-03-26T00:00:00Z">March 26, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="the-problem">The Problem</h2>
+<p>I&rsquo;ve been working on the AI for my game, which takes place on a toroidal grid with dynamic systems like population growth, energy networks, and resource management. It’s a complex environment with a lot of long-term planning involved — and that makes writing a good AI surprisingly tricky.</p>
+<p>Up until now, I’ve been using a classic <strong>minimax</strong> algorithm with a <strong>handcrafted evaluation function</strong>. Here&rsquo;s the setup:</p>
+<ul>
+<li>A minimax tree search (depth-limited)</li>
+<li>A fixed <code>evaluate()</code> function that tries to guess how &ldquo;good&rdquo; a state is, based on:
+<ul>
+<li>Population size</li>
+<li>Energy yield</li>
+<li>Proximity to resources</li>
+<li>Habitat count</li>
+<li>Loops in pipe networks (bad!)</li>
+<li>And more&hellip;</li>
+</ul>
+</li>
+</ul>
+<p>While this approach works <em>okay</em> in simple cases, it really struggles in the kinds of situations my game cares most about — especially when <strong>timing and sequence of actions</strong> matter more than just static advantage.</p>
+<h2 id="the-problem-with-handcrafted-heuristics">The Problem with Handcrafted Heuristics</h2>
+<p>The truth is, it’s <em>really hard</em> to come up with a good evaluation function that captures all the nuances of gameplay. Especially when:</p>
+<ul>
+<li>The value of actions changes over time</li>
+<li>There&rsquo;s hidden long-term payoff that heuristics can&rsquo;t &ldquo;see&rdquo;</li>
+<li>Loops or mistakes compound subtly</li>
+</ul>
+<p>So, I started looking for better options — and landed on something much more exciting.</p>
+<hr>
+<h2 id="the-plan-monte-carlo-tree-search--learned-evaluation">The Plan: Monte Carlo Tree Search + Learned Evaluation</h2>
+<h3 id="step-1-basic-mcts-with-random-rollouts">Step 1: Basic MCTS with Random Rollouts</h3>
+<p>The first step is to implement <strong>Monte Carlo Tree Search (MCTS)</strong>, where instead of simulating all actions exhaustively like minimax, I simulate <em>random playthroughs</em> and average their outcomes.</p>
+<p>The core ideas:</p>
+<ul>
+<li>Nodes represent game states</li>
+<li>Simulate random games to estimate how good a state is</li>
+<li>Use <strong>UCT</strong> (Upper Confidence Bound) to balance how deep vs. how wide does the algorithm explore game states.</li>
+<li>Backpropagate results to update parent nodes</li>
+</ul>
+<h3 id="step-2-replace-random-rollouts-with-heuristic-evaluation">Step 2: Replace Random Rollouts with Heuristic Evaluation</h3>
+<p>As an intermediate step, I can plug in my existing <code>evaluate()</code> function instead of doing full random rollouts. This lets MCTS make faster decisions and deeper searches.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">evaluate</span>(<span style="color:#a6e22e">state</span>); <span style="color:#75715e">// heuristic instead of random rollout
+</span></span></span></code></pre></div><h3 id="step-3-learn-the-heuristic-with-supervised-learning">Step 3: Learn the Heuristic with Supervised Learning</h3>
+<p>Instead of trying to hand-tune the evaluation function, why not learn it?
+Run MCTS on lots of game states
+Save:
+the state
+the value (from MCTS)
+the best action (optional)
+Train a neural network to predict the value of a state
+This gives me a value network I can use in future MCTS runs — just like AlphaZero.</p>
+<h3 id="step-4-full-self-play-reinforcement-learning">Step 4: Full Self-Play Reinforcement Learning</h3>
+<p>Once I’m comfortable with MCTS and training value networks, I want to move to self-play:
+Let the AI play against itself
+Use the results to continually improve the network
+Train both value and policy (best move) predictions
+Repeat!
+Now I’ve entered the world of AlphaZero-style AI — tailored to my own game.</p>
+<h3 id="tech-stack-ideas">Tech Stack Ideas</h3>
+<p>Although my game is built in TypeScript, I can log game state and train models using Python:
+Training: PyTorch or TensorFlow
+Storage: export game states as JSON
+Replay and Simulation: headless version of game logic
+MCTS: either in TypeScript or as a fast Python backend</p>
+<h3 id="whats-next">What&rsquo;s Next?</h3>
+<p>I&rsquo;m currently implementing MCTS in TypeScript with my existing game logic. Once that&rsquo;s working, I&rsquo;ll:
+Start logging training data
+Train a simple model on MCTS values
+Replace the heuristic with the model&rsquo;s output
+Keep iterating!
+This journey has already taught me a ton about AI, game design, and how even simple games can create deep strategy.
+Stay tuned for more updates — and hopefully smarter AIs soon!</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/vojtanyc/tags/ai/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">AI</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/vojtanyc/tags/game-development/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Game Development</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/vojtanyc/tags/reinforcement-learning/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Reinforcement Learning</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/vojtanyc/tags/mcts/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">MCTS</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/vojtanyc/tags/minimax/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Minimax</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/vojtanyc/tags/typescript/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Typescript</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/vojtanyc/posts/finding-loops/">Finding Loops on Torus</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/vojtanyc/" >
+    &copy;  Sidequests 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
