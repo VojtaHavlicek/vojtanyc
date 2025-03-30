@@ -46,8 +46,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Game Development">
-  <meta itemprop="datePublished" content="2025-03-23T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-03-23T00:00:00+00:00">
+  <meta itemprop="datePublished" content="2025-03-26T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-03-26T00:00:00+00:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Game Development">
 
@@ -101,11 +101,11 @@
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/vojtanyc/posts/from-minimax-to-mcts/" class="link black dim">
-        From Minimax to Monte Carlo Tree Search: Smarter AI for My Game
+        From Minimax to Monte Carlo Tree Search: Smarter AI for Mars Colony
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="-the-problem">🤖 The Problem</h2>
+      <h2 id="the-problem">The Problem</h2>
 <p>I&rsquo;ve been working on the AI for my game, which takes place on a toroidal grid with dynamic systems like population growth, energy networks, and resource management. It’s a complex environment with a lot of long-term planning involved — and that makes writing a good AI surprisingly tricky.</p>
 <p>Up until now, I’ve been using a classic <strong>minimax</strong> algorithm with a <strong>handcrafted evaluation function</strong>. Here&rsquo;s the setup:</p>
 <ul>
@@ -124,6 +124,33 @@
 <p>While this approach works <em>okay</em> in simple cases, it really struggles in the kinds of situations my game cares most about — especially when <strong>timing and sequence of actions</strong> matter more than just static advantage.</p>
     </div>
     <a href="/vojtanyc/posts/from-minimax-to-mcts/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/vojtanyc/posts/finding-loops/" class="link black dim">
+        Finding Loops on Torus
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <h2 id="-problem-statement">🧩 Problem Statement</h2>
+<p>In my current game project, I&rsquo;m working with a toroidal 2D grid (a grid that wraps around like a donut). On this grid, certain tiles are marked as “paths.” These paths can form closed loops, and I wanted a way to <strong>detect and count the number of such loops</strong>.</p>
+<p>There’s a twist:</p>
+<ul>
+<li>The grid <strong>wraps around both horizontally and vertically</strong> (like Pac-Man).</li>
+<li>I only get the path data as a <strong>list of coordinates</strong>, not a full 2D array.</li>
+<li>And there may be <strong>multiple disconnected path components</strong> on the grid.</li>
+</ul>
+<h2 id="-strategy">🧠 Strategy</h2>
+<p>Instead of trying to trace every possible loop (which is hard and inefficient), I used a classic trick from graph theory:</p>
+    </div>
+    <a href="/vojtanyc/posts/finding-loops/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 

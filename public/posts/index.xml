@@ -6,21 +6,28 @@
     <description>Recent content in Posts on Sidequests</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Mar 2025 12:04:56 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/vojtanyc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Minimax to Monte Carlo Tree Search: Progress Update</title>
+      <link>http://localhost:1313/vojtanyc/posts/mcts-progress-update/</link>
+      <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vojtanyc/posts/mcts-progress-update/</guid>
+      <description>&lt;h2 id=&#34;ai-evolution-from-minimax-to-mcts&#34;&gt;AI Evolution: From Minimax to MCTS&lt;/h2&gt;&#xA;&lt;p&gt;Over the past few days, I&amp;rsquo;ve made some big strides in improving the AI for my game. What started as a basic &lt;strong&gt;minimax + heuristic&lt;/strong&gt; approach quickly ran into limitations. The game is timing-sensitive and rewards long-term planning — not something minimax handles easily with shallow depth and static evaluations.&lt;/p&gt;&#xA;&lt;p&gt;So, I switched gears and started working on a &lt;strong&gt;Monte Carlo Tree Search (MCTS)&lt;/strong&gt; implementation — and I’m really happy with the progress.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>From Minimax to Monte Carlo Tree Search: Smarter AI for Mars Colony</title>
+      <link>http://localhost:1313/vojtanyc/posts/from-minimax-to-mcts/</link>
+      <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vojtanyc/posts/from-minimax-to-mcts/</guid>
+      <description>&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been working on the AI for my game, which takes place on a toroidal grid with dynamic systems like population growth, energy networks, and resource management. It’s a complex environment with a lot of long-term planning involved — and that makes writing a good AI surprisingly tricky.&lt;/p&gt;&#xA;&lt;p&gt;Up until now, I’ve been using a classic &lt;strong&gt;minimax&lt;/strong&gt; algorithm with a &lt;strong&gt;handcrafted evaluation function&lt;/strong&gt;. Here&amp;rsquo;s the setup:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A minimax tree search (depth-limited)&lt;/li&gt;&#xA;&lt;li&gt;A fixed &lt;code&gt;evaluate()&lt;/code&gt; function that tries to guess how &amp;ldquo;good&amp;rdquo; a state is, based on:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Population size&lt;/li&gt;&#xA;&lt;li&gt;Energy yield&lt;/li&gt;&#xA;&lt;li&gt;Proximity to resources&lt;/li&gt;&#xA;&lt;li&gt;Habitat count&lt;/li&gt;&#xA;&lt;li&gt;Loops in pipe networks (bad!)&lt;/li&gt;&#xA;&lt;li&gt;And more&amp;hellip;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;While this approach works &lt;em&gt;okay&lt;/em&gt; in simple cases, it really struggles in the kinds of situations my game cares most about — especially when &lt;strong&gt;timing and sequence of actions&lt;/strong&gt; matter more than just static advantage.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Finding Loops on Torus</title>
       <link>http://localhost:1313/vojtanyc/posts/finding-loops/</link>
       <pubDate>Sun, 23 Mar 2025 12:04:56 -0400</pubDate>
       <guid>http://localhost:1313/vojtanyc/posts/finding-loops/</guid>
       <description>&lt;h2 id=&#34;-problem-statement&#34;&gt;🧩 Problem Statement&lt;/h2&gt;&#xA;&lt;p&gt;In my current game project, I&amp;rsquo;m working with a toroidal 2D grid (a grid that wraps around like a donut). On this grid, certain tiles are marked as “paths.” These paths can form closed loops, and I wanted a way to &lt;strong&gt;detect and count the number of such loops&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;There’s a twist:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The grid &lt;strong&gt;wraps around both horizontally and vertically&lt;/strong&gt; (like Pac-Man).&lt;/li&gt;&#xA;&lt;li&gt;I only get the path data as a &lt;strong&gt;list of coordinates&lt;/strong&gt;, not a full 2D array.&lt;/li&gt;&#xA;&lt;li&gt;And there may be &lt;strong&gt;multiple disconnected path components&lt;/strong&gt; on the grid.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;-strategy&#34;&gt;🧠 Strategy&lt;/h2&gt;&#xA;&lt;p&gt;Instead of trying to trace every possible loop (which is hard and inefficient), I used a classic trick from graph theory:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>From Minimax to Monte Carlo Tree Search: Smarter AI for My Game</title>
-      <link>http://localhost:1313/vojtanyc/posts/from-minimax-to-mcts/</link>
-      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/vojtanyc/posts/from-minimax-to-mcts/</guid>
-      <description>&lt;h2 id=&#34;-the-problem&#34;&gt;🤖 The Problem&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been working on the AI for my game, which takes place on a toroidal grid with dynamic systems like population growth, energy networks, and resource management. It’s a complex environment with a lot of long-term planning involved — and that makes writing a good AI surprisingly tricky.&lt;/p&gt;&#xA;&lt;p&gt;Up until now, I’ve been using a classic &lt;strong&gt;minimax&lt;/strong&gt; algorithm with a &lt;strong&gt;handcrafted evaluation function&lt;/strong&gt;. Here&amp;rsquo;s the setup:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A minimax tree search (depth-limited)&lt;/li&gt;&#xA;&lt;li&gt;A fixed &lt;code&gt;evaluate()&lt;/code&gt; function that tries to guess how &amp;ldquo;good&amp;rdquo; a state is, based on:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Population size&lt;/li&gt;&#xA;&lt;li&gt;Energy yield&lt;/li&gt;&#xA;&lt;li&gt;Proximity to resources&lt;/li&gt;&#xA;&lt;li&gt;Habitat count&lt;/li&gt;&#xA;&lt;li&gt;Loops in pipe networks (bad!)&lt;/li&gt;&#xA;&lt;li&gt;And more&amp;hellip;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;While this approach works &lt;em&gt;okay&lt;/em&gt; in simple cases, it really struggles in the kinds of situations my game cares most about — especially when &lt;strong&gt;timing and sequence of actions&lt;/strong&gt; matter more than just static advantage.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Writing a turn-based strategy game bot</title>
@@ -34,7 +41,7 @@
       <link>http://localhost:1313/vojtanyc/posts/generating_interfaces/</link>
       <pubDate>Wed, 01 Jan 2025 21:03:29 -0500</pubDate>
       <guid>http://localhost:1313/vojtanyc/posts/generating_interfaces/</guid>
-      <description>&lt;p&gt;We are currently developing a turn based strategy &lt;a href=&#34;https://martians-nine.vercel.app&#34;&gt;game&lt;/a&gt; with Michal Srb. Let me explain you the rules first. I fed the following prompt to ChatGPT o1:&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Let me explain you the rules first:&lt;/p&gt;&#xA;&lt;p&gt;The game is a turn-based strategy where two players play against each other. Each player tries to connect energy resources (green circles with R) to habitats (circles labeled with P) using pipes (the thick lines).&lt;/p&gt;&#xA;&lt;p&gt;Each habitat has a certain population (the number that appears after P). The goal of the game is to get a total population of 30 before your oponent and not run out of energy.&lt;/p&gt;</description>
+      <description>&lt;p&gt;We are currently developing a turn-based strategy &lt;a href=&#34;https://martians-nine.vercel.app&#34;&gt;game&lt;/a&gt; we tentativelly call Mars Colony with a friend. Here are the rules:&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Let me explain you the rules first:&lt;/p&gt;&#xA;&lt;p&gt;The game is a turn-based strategy where two players play against each other. Each player tries to connect energy resources (green circles with R) to habitats (circles labeled with P) using pipes (the thick lines).&lt;/p&gt;&#xA;&lt;p&gt;Each habitat has a certain population (the number that appears after P). The goal of the game is to get a total population of 30 before your oponent and not run out of energy.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -6,8 +6,15 @@
     <description>Recent content on Sidequests</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/vojtanyc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Minimax to Monte Carlo Tree Search: Progress Update</title>
+      <link>http://localhost:1313/vojtanyc/posts/mcts-progress-update/</link>
+      <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vojtanyc/posts/mcts-progress-update/</guid>
+      <description>&lt;h2 id=&#34;from-minimax-to-mcts&#34;&gt;From Minimax to MCTS&lt;/h2&gt;&#xA;&lt;p&gt;Over the past few days, I&amp;rsquo;ve made some big strides in improving the AI for my game. What started as a basic &lt;strong&gt;minimax + heuristic&lt;/strong&gt; approach quickly ran into limitations. The game is timing-sensitive and rewards long-term planning — not something minimax handles easily with shallow depth and static evaluations.&lt;/p&gt;&#xA;&lt;p&gt;So, I switched gears and started working on a &lt;strong&gt;Monte Carlo Tree Search (MCTS)&lt;/strong&gt; implementation — and I’m really happy with the progress.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>From Minimax to Monte Carlo Tree Search: Smarter AI for Mars Colony</title>
       <link>http://localhost:1313/vojtanyc/posts/from-minimax-to-mcts/</link>

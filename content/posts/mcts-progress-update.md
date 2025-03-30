@@ -1,11 +1,11 @@
 +++
-title: "From Minimax to Monte Carlo Tree Search: Progress Update"
-date: 2025-03-28
-tags: ["AI", "gamedev", "typescript", "MCTS", "devlog"]
-description: "A behind-the-scenes look at switching my game AI from heuristics to Monte Carlo Tree Search"
+title="From Minimax to Monte Carlo Tree Search: Progress Update"
+date='2025-03-28'
+tags=["AI", "gamedev", "typescript", "MCTS", "devlog"]
+description="A behind-the-scenes look at switching my game AI from heuristics to Monte Carlo Tree Search"
 +++
 
-## AI Evolution: From Minimax to MCTS
+## From Minimax to MCTS
 
 Over the past few days, I've made some big strides in improving the AI for my game. What started as a basic **minimax + heuristic** approach quickly ran into limitations. The game is timing-sensitive and rewards long-term planning — not something minimax handles easily with shallow depth and static evaluations.
 
