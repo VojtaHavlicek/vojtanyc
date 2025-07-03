@@ -1,6 +1,5 @@
 +++
 date = '2025-07-02T22:41:07-04:00'
-draft = true
 title = 'Releasing Piskvor Prime: A Five-in-a-Row Game with Personality'
 description = "How I tried to give a classic board game some personality"
 tags = ["gamedev", "AI", "minimax", "indie", "gomoku", "ai", "pixel art", "spritekit", "ios"]
