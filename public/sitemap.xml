@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/vojtanyc/posts/piskvor-prime/</loc>
+    <lastmod>2025-07-02T22:41:07-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/vojtanyc/posts/</loc>
+    <lastmod>2025-07-02T22:41:07-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/vojtanyc/</loc>
+    <lastmod>2025-07-02T22:41:07-04:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/vojtanyc/tags/ai/</loc>
     <lastmod>2025-03-28T00:00:00+00:00</lastmod>
   </url><url>
@@ -15,12 +24,6 @@
     <lastmod>2025-03-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/vojtanyc/tags/mcts/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/vojtanyc/posts/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/vojtanyc/</loc>
     <lastmod>2025-03-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/vojtanyc/tags/</loc>
